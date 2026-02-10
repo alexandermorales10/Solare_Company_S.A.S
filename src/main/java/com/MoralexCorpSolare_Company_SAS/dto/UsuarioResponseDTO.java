@@ -4,19 +4,19 @@ public class UsuarioResponseDTO {
 
     private Long id;
     private String nombre;
-    private String email;
-    private String rol;
+    private String correo;
+    private String rolUsuario;
     private Boolean activo;
 
     public UsuarioResponseDTO() {
     }
 
-    public UsuarioResponseDTO(Long id, String nombre, String email,
-                              String rol, Boolean activo) {
+    public UsuarioResponseDTO(Long id, String nombre, String correo,
+                              String rolUsuario, Boolean activo) {
         this.id = id;
         this.nombre = nombre;
-        this.email = email;
-        this.rol = rol;
+        this.correo = correo;
+        this.rolUsuario = rolUsuario;
         this.activo = activo;
     }
 
@@ -36,20 +36,20 @@ public class UsuarioResponseDTO {
         this.nombre = nombre;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
-    public String getRol() {
-        return rol;
+    public String getRolUsuario() {
+        return rolUsuario;
     }
 
-    public void setRol(String rol) {
-        this.rol = rol;
+    public void setRolUsuario(String rolUsuario) {
+        this.rolUsuario = rolUsuario;
     }
 
     public Boolean getActivo() {

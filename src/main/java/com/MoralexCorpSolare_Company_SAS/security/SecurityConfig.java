@@ -1,5 +1,6 @@
 package com.MoralexCorpSolare_Company_SAS.security;
 
+import com.MoralexCorpSolare_Company_SAS.service.impl.UsuarioServiceImpl;
 import org.springframework.context.annotation.*;
 import org.springframework.security.authentication.*;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -7,13 +8,15 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+
 
 @Configuration
 public class SecurityConfig {
 
-    private final UserDetailsServiceImpl userDetailsService;
+    private final UsuarioServiceImpl userDetailsService;
 
-    public SecurityConfig(UserDetailsServiceImpl userDetailsService) {
+    public SecurityConfig(UsuarioServiceImpl userDetailsService) {
         this.userDetailsService = userDetailsService;
     }
 

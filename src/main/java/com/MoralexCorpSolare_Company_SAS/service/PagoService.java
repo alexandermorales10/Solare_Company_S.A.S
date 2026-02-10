@@ -16,4 +16,11 @@ public interface PagoService {
     void procesarWebhook(String payload);
 
     List<PagoResponseDTO> obtenerTodos();
+
+
+    PagoResponseDTO obtenerPorId(Long id);
+
+    PagoResponseDTO obtenerPorTransactionId(String transactionId);
+
+    void eliminarPago(Long id);
 }

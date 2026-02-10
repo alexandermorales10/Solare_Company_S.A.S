@@ -89,6 +89,36 @@ public class PagoServiceImpl implements PagoService {
     }
 
     @Override
+    public PagoResponseDTO obtenerPorId(Long id) {
+
+        Pago pago = pagoRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Pago no encontrado con id: " + id));
+
+        return PagoMapper.toResponseDTO(pago);
+    }
+
+    @Override
+    public PagoResponseDTO obtenerPorTransactionId(String transactionId) {
+
+        Pago pago = pagoRepository.findByTransactionId(transactionId)
+                .orElseThrow(() -> new ResourceNotFoundException(
+                        "Pago no encontrado con transactionId: " + transactionId
+                ));
+
+        return PagoMapper.toResponseDTO(pago);
+    }
+
+    @Override
+    public void eliminarPago(Long id) {
+
+        Pago pago = pagoRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Pago no encontrado con id: " + id));
+
+        pagoRepository.delete(pago);
+    }
+
+
+    @Override
     public void procesarWebhook(String transactionId) {
 
         Pago pago = pagoRepository.findByTransactionId(transactionId)
