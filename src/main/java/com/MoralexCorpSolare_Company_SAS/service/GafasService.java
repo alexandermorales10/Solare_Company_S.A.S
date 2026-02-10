@@ -1,7 +1,6 @@
 package com.MoralexCorpSolare_Company_SAS.service;
 
 import com.MoralexCorpSolare_Company_SAS.entity.Gafas;
-import com.MoralexCorpSolare_Company_SAS.repository.GafasRepository;
 
 import java.util.List;
 
