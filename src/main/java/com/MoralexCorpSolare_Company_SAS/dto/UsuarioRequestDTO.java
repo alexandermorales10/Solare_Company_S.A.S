@@ -10,8 +10,8 @@ public class UsuarioRequestDTO {
     private String nombre;
 
     @NotBlank(message = "El email es obligatorio")
-    @Email(message = "Debe ser un email válido")
-    private String email;
+    @Email(message = "Debe ser un correo válido")
+    private String correo;
 
     @NotBlank(message = "La contraseña es obligatoria")
     @Size(min = 6, message = "La contraseña debe tener mínimo 6 caracteres")
@@ -31,12 +31,12 @@ public class UsuarioRequestDTO {
         this.nombre = nombre;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
     public String getPassword() {

@@ -32,7 +32,7 @@ public class UsuarioMapper {
 
         Usuario usuario = new Usuario();
         usuario.setNombre(dto.getNombre());
-        usuario.setCorreo(dto.getEmail());
+        usuario.setCorreo(dto.getCorreo());
         usuario.setPassword(dto.getPassword());
 
         // Convertir String -> Enum
@@ -52,7 +52,7 @@ public class UsuarioMapper {
         }
 
         usuario.setNombre(dto.getNombre());
-        usuario.setCorreo(dto.getEmail());
+        usuario.setCorreo(dto.getCorreo());
 
         if (dto.getPassword() != null && !dto.getPassword().isEmpty()) {
             usuario.setPassword(dto.getPassword());

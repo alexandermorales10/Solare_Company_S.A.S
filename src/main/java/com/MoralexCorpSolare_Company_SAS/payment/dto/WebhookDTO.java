@@ -12,13 +12,19 @@ public class WebhookDTO {
 
     private TransactionData data;
 
-    @Data
     public static class TransactionData {
 
         private Transaction transaction;
+
+        public Transaction getTransaction() {
+            return transaction;
+        }
+
+        public void setTransaction(Transaction transaction) {
+            this.transaction = transaction;
+        }
     }
 
-    @Data
     public static class Transaction {
 
         private String id;                 // transactionId de Wompi
@@ -28,5 +34,61 @@ public class WebhookDTO {
         private String paymentMethodType;  // CARD, PSE, etc
         private LocalDateTime createdAt;
         private LocalDateTime finalizedAt;
+
+        public String getId() {
+            return id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
+        }
+
+        public BigDecimal getAmountInCents() {
+            return amountInCents;
+        }
+
+        public void setAmountInCents(BigDecimal amountInCents) {
+            this.amountInCents = amountInCents;
+        }
+
+        public String getReference() {
+            return reference;
+        }
+
+        public void setReference(String reference) {
+            this.reference = reference;
+        }
+
+        public String getPaymentMethodType() {
+            return paymentMethodType;
+        }
+
+        public void setPaymentMethodType(String paymentMethodType) {
+            this.paymentMethodType = paymentMethodType;
+        }
+
+        public LocalDateTime getCreatedAt() {
+            return createdAt;
+        }
+
+        public void setCreatedAt(LocalDateTime createdAt) {
+            this.createdAt = createdAt;
+        }
+
+        public LocalDateTime getFinalizedAt() {
+            return finalizedAt;
+        }
+
+        public void setFinalizedAt(LocalDateTime finalizedAt) {
+            this.finalizedAt = finalizedAt;
+        }
     }
 }

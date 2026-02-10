@@ -14,10 +14,10 @@ import org.springframework.security.config.annotation.authentication.configurati
 @Configuration
 public class SecurityConfig {
 
-    private final UsuarioServiceImpl userDetailsService;
+    private final UsuarioServiceImpl usuarioService;
 
     public SecurityConfig(UsuarioServiceImpl userDetailsService) {
-        this.userDetailsService = userDetailsService;
+        this.usuarioService = userDetailsService;
     }
 
     @Bean

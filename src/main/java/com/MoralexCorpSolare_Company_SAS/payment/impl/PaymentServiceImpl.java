@@ -61,7 +61,7 @@ public class PaymentServiceImpl implements PaymentService {
                 .findByTransactionId(transactionId)
                 .orElseThrow(() -> new RuntimeException("Pago no encontrado"));
 
-        // 3️Actualizar estado del pago
+        // Actualizar estado del pago
         pago.setEstadoPago(status);
         pagoRepository.save(pago);
     }
