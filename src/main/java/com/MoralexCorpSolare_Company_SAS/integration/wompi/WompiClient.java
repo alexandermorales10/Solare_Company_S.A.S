@@ -4,6 +4,8 @@ import com.MoralexCorpSolare_Company_SAS.entity.Pago;
 import com.MoralexCorpSolare_Company_SAS.payment.dto.PaymentRequestDTO;
 import com.MoralexCorpSolare_Company_SAS.payment.dto.PaymentResponseDTO;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -28,6 +30,7 @@ public class WompiClient {
 
     @Value("${wompi.enabled:false}")
     private boolean wompiEnabled;
+
 
     public WompiClient(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
@@ -88,7 +91,6 @@ public class WompiClient {
             return dto;
         }
 
-        // ✅ LLAMADO REAL A WOMPI
         String url = wompiUrl + "/transactions";
 
         Map<String, Object> body = new HashMap<>();

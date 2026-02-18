@@ -15,7 +15,7 @@ public class PagoRequestDTO {
 
     private PaymentMethod metodoPago;
 
-    private String emailCliente;
+    private String correoCliente;
 
     private String referencia;
 
@@ -51,12 +51,12 @@ public class PagoRequestDTO {
         this.metodoPago = metodoPago;
     }
 
-    public String getEmailCliente() {
-        return emailCliente;
+    public String getCorreoCliente() {
+        return correoCliente;
     }
 
-    public void setEmailCliente(String emailCliente) {
-        this.emailCliente = emailCliente;
+    public void setCorreoCliente(String correoCliente) {
+        this.correoCliente = correoCliente;
     }
 
     public String getReferencia() {

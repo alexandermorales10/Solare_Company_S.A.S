@@ -3,9 +3,11 @@ package com.MoralexCorpSolare_Company_SAS.service.impl;
 import com.MoralexCorpSolare_Company_SAS.entity.Usuario;
 import com.MoralexCorpSolare_Company_SAS.repository.UsuarioRepository;
 import com.MoralexCorpSolare_Company_SAS.service.UsuarioService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UsuarioServiceImpl implements UsuarioService {
 
     private final UsuarioRepository usuarioRepository;
