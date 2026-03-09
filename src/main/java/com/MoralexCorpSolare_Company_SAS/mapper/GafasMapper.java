@@ -1,7 +1,7 @@
 package com.MoralexCorpSolare_Company_SAS.mapper;
 
-import com.MoralexCorpSolare_Company_SAS.dto.GafasRequestDTO;
-import com.MoralexCorpSolare_Company_SAS.dto.GafasResponseDTO;
+import com.MoralexCorpSolare_Company_SAS.dto.request.GafasRequestDTO;
+import com.MoralexCorpSolare_Company_SAS.dto.response.GafasResponseDTO;
 import com.MoralexCorpSolare_Company_SAS.entity.Gafas;
 
 public class GafasMapper {

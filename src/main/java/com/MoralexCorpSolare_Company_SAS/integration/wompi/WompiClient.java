@@ -1,11 +1,9 @@
 package com.MoralexCorpSolare_Company_SAS.integration.wompi;
 
+import com.MoralexCorpSolare_Company_SAS.dto.request.PagoRequestDTO;
+import com.MoralexCorpSolare_Company_SAS.dto.response.PagoResponseDTO;
 import com.MoralexCorpSolare_Company_SAS.entity.Pago;
-import com.MoralexCorpSolare_Company_SAS.payment.dto.PaymentRequestDTO;
-import com.MoralexCorpSolare_Company_SAS.payment.dto.PaymentResponseDTO;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -78,15 +76,15 @@ public class WompiClient {
     }
 
     // Crear transacción usando DTO (Recomendado)
-    public PaymentResponseDTO createTransaction(PaymentRequestDTO requestDTO) {
+    public PagoResponseDTO createTransaction(PagoRequestDTO requestDTO) {
 
-        // ✅ SIMULACIÓN SI WOMPI ESTÁ DESACTIVADO
+        // SIMULACIÓN SI WOMPI ESTÁ DESACTIVADO
         if (!wompiEnabled) {
 
-            PaymentResponseDTO dto = new PaymentResponseDTO();
-            dto.setTransactionIdWompi("SIM-" + System.currentTimeMillis());
-            dto.setEstadoPago("APPROVED");
-            dto.setReferenciaCompra(requestDTO.getReferenciaCompra());
+            PagoResponseDTO dto = new PagoResponseDTO();
+            dto.setReferenciaWompi("SIM-" + System.currentTimeMillis());
+            dto.setEstado("APPROVED");
+            dto.setReferencia(requestDTO.getReferencia());
 
             return dto;
         }
@@ -97,11 +95,11 @@ public class WompiClient {
         body.put("amount_in_cents",
                 requestDTO.getMonto().multiply(new BigDecimal(100)).intValue());
         body.put("currency", "COP");
-        body.put("customer_email", requestDTO.getEmailCliente());
+        body.put("customer_email", requestDTO.getCorreoCliente());
         body.put("payment_method", Map.of(
                 "type", requestDTO.getMetodoPago()
         ));
-        body.put("reference", requestDTO.getReferenciaCompra());
+        body.put("reference", requestDTO.getReferencia());
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -122,10 +120,10 @@ public class WompiClient {
         Map<String, Object> data =
                 (Map<String, Object>) responseBody.get("data");
 
-        PaymentResponseDTO dto = new PaymentResponseDTO();
-        dto.setTransactionIdWompi((String) data.get("id"));
-        dto.setEstadoPago((String) data.get("status"));
-        dto.setReferenciaCompra((String) data.get("reference"));
+        PagoResponseDTO dto = new PagoResponseDTO();
+        dto.setReferenciaWompi((String) data.get("id"));
+        dto.setEstado((String) data.get("status"));
+        dto.setReferencia((String) data.get("reference"));
 
         return dto;
     }

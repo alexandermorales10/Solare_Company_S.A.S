@@ -29,6 +29,21 @@ public class Gafas {
 
     private Boolean active = true ;
 
+    public Gafas(Long id, String marca, String modelo, String tipo, BigDecimal precio, String color, Integer stock, Boolean active) {
+        this.id = id;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.tipo = tipo;
+        this.precio = precio;
+        this.color = color;
+        this.stock = stock;
+        this.active = active;
+    }
+
+    public Gafas() {
+
+    }
+
     public Long getId() {
         return id;
     }

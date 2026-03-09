@@ -1,4 +1,4 @@
-package com.MoralexCorpSolare_Company_SAS.dto;
+package com.MoralexCorpSolare_Company_SAS.dto.request;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;

@@ -1,6 +1,6 @@
 package com.MoralexCorpSolare_Company_SAS.enums;
 
-public enum PaymentStatus {
+public enum EstadoPago {
     PEDIENTE,
     APROBADO,
     RECHAZADO,

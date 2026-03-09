@@ -1,7 +1,7 @@
 package com.MoralexCorpSolare_Company_SAS.service;
 
-import com.MoralexCorpSolare_Company_SAS.dto.PagoRequestDTO;
-import com.MoralexCorpSolare_Company_SAS.dto.PagoResponseDTO;
+import com.MoralexCorpSolare_Company_SAS.dto.request.PagoRequestDTO;
+import com.MoralexCorpSolare_Company_SAS.dto.response.PagoResponseDTO;
 
 import java.util.List;
 

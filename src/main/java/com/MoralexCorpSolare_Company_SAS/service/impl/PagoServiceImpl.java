@@ -1,7 +1,7 @@
 package com.MoralexCorpSolare_Company_SAS.service.impl;
 
-import com.MoralexCorpSolare_Company_SAS.dto.PagoRequestDTO;
-import com.MoralexCorpSolare_Company_SAS.dto.PagoResponseDTO;
+import com.MoralexCorpSolare_Company_SAS.dto.request.PagoRequestDTO;
+import com.MoralexCorpSolare_Company_SAS.dto.response.PagoResponseDTO;
 import com.MoralexCorpSolare_Company_SAS.entity.Gafas;
 import com.MoralexCorpSolare_Company_SAS.entity.Pago;
 import com.MoralexCorpSolare_Company_SAS.exception.BadRequestException;

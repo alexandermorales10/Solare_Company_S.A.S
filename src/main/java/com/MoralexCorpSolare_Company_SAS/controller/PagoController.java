@@ -1,7 +1,7 @@
 package com.MoralexCorpSolare_Company_SAS.controller;
 
-import com.MoralexCorpSolare_Company_SAS.dto.PagoRequestDTO;
-import com.MoralexCorpSolare_Company_SAS.dto.PagoResponseDTO;
+import com.MoralexCorpSolare_Company_SAS.dto.request.PagoRequestDTO;
+import com.MoralexCorpSolare_Company_SAS.dto.response.PagoResponseDTO;
 import com.MoralexCorpSolare_Company_SAS.service.PagoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +18,7 @@ public class PagoController {
         this.pagoService = pagoService;
     }
 
-    // ✅ Crear pago
+    // Crear pago
     @PostMapping
     public ResponseEntity<PagoResponseDTO> crearPago(
             @RequestBody PagoRequestDTO requestDTO) {
@@ -26,13 +26,13 @@ public class PagoController {
         return ResponseEntity.ok(pagoService.crearPago(requestDTO));
     }
 
-    // ✅ Obtener todos los pagos
+    // Obtener todos los pagos
     @GetMapping
     public ResponseEntity<List<PagoResponseDTO>> obtenerTodos() {
         return ResponseEntity.ok(pagoService.obtenerTodos());
     }
 
-    // ✅ Obtener pago por ID
+    // Obtener pago por ID
     @GetMapping("/{id}")
     public ResponseEntity<PagoResponseDTO> obtenerPorId(
             @PathVariable Long id) {
@@ -40,7 +40,7 @@ public class PagoController {
         return ResponseEntity.ok(pagoService.obtenerPorId(id));
     }
 
-    // ✅ Buscar pago por transactionId
+    // Buscar pago por transactionId
     @GetMapping("/transaction/{transactionId}")
     public ResponseEntity<PagoResponseDTO> obtenerPorTransactionId(
             @PathVariable String transactionId) {
@@ -50,7 +50,7 @@ public class PagoController {
         );
     }
 
-    // ✅ Eliminar pago
+    // Eliminar pago
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminarPago(@PathVariable Long id) {
 

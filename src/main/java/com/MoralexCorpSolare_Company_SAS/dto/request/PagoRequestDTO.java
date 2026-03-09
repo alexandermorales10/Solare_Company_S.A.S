@@ -1,6 +1,6 @@
-package com.MoralexCorpSolare_Company_SAS.dto;
+package com.MoralexCorpSolare_Company_SAS.dto.request;
 
-import com.MoralexCorpSolare_Company_SAS.enums.PaymentMethod;
+import com.MoralexCorpSolare_Company_SAS.enums.MetodoPago;
 
 import java.math.BigDecimal;
 
@@ -13,11 +13,14 @@ public class PagoRequestDTO {
 
     private BigDecimal monto;
 
-    private PaymentMethod metodoPago;
+    private MetodoPago metodoPago;
 
     private String correoCliente;
 
     private String referencia;
+
+    public PagoRequestDTO() {
+    }
 
     public Long getGafasId() {
         return gafasId;
@@ -43,11 +46,11 @@ public class PagoRequestDTO {
         this.monto = monto;
     }
 
-    public PaymentMethod getMetodoPago() {
+    public MetodoPago getMetodoPago() {
         return metodoPago;
     }
 
-    public void setMetodoPago(PaymentMethod metodoPago) {
+    public void setMetodoPago(MetodoPago metodoPago) {
         this.metodoPago = metodoPago;
     }
 

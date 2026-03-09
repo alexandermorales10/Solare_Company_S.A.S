@@ -1,7 +1,7 @@
 package com.MoralexCorpSolare_Company_SAS.mapper;
 
-import com.MoralexCorpSolare_Company_SAS.dto.UsuarioRequestDTO;
-import com.MoralexCorpSolare_Company_SAS.dto.UsuarioResponseDTO;
+import com.MoralexCorpSolare_Company_SAS.dto.request.UsuarioRequestDTO;
+import com.MoralexCorpSolare_Company_SAS.dto.response.UsuarioResponseDTO;
 import com.MoralexCorpSolare_Company_SAS.entity.Usuario;
 import com.MoralexCorpSolare_Company_SAS.enums.RolUsuario;
 

@@ -32,6 +32,22 @@ public class Usuario {
     @Enumerated(EnumType.STRING)
     private RolUsuario rolUsuario;
 
+    // Constructor vacio
+    public Usuario() {
+    }
+
+
+    public Usuario(long id, String nombre, String apellido, String correo, String password, Boolean activo, RolUsuario rolUsuario) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
+        this.password = password;
+        this.activo = activo;
+        this.rolUsuario = rolUsuario;
+    }
+
+
     public long getId() {
         return id;
     }

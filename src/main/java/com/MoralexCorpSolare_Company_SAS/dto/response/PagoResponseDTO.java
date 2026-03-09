@@ -1,7 +1,6 @@
-package com.MoralexCorpSolare_Company_SAS.dto;
+package com.MoralexCorpSolare_Company_SAS.dto.response;
 
-import com.MoralexCorpSolare_Company_SAS.enums.PaymentMethod;
-import lombok.Data;
+import com.MoralexCorpSolare_Company_SAS.enums.MetodoPago;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -18,13 +17,14 @@ public class PagoResponseDTO {
 
     private String estado;
 
-    private PaymentMethod metodoPago;
+    private MetodoPago metodoPago;
 
     private String referencia;
 
     private String referenciaWompi;
 
     private LocalDateTime fechaPago;
+
 
     public void setMetodoPago(String metodoPago) {
     }
@@ -69,11 +69,11 @@ public class PagoResponseDTO {
         this.estado = estado;
     }
 
-    public PaymentMethod getMetodoPago() {
+    public MetodoPago getMetodoPago() {
         return metodoPago;
     }
 
-    public void setMetodoPago(PaymentMethod metodoPago) {
+    public void setMetodoPago(MetodoPago metodoPago) {
         this.metodoPago = metodoPago;
     }
 
@@ -100,4 +100,6 @@ public class PagoResponseDTO {
     public void setFechaPago(LocalDateTime fechaPago) {
         this.fechaPago = fechaPago;
     }
+
+
 }

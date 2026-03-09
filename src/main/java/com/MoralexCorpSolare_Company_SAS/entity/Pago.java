@@ -34,10 +34,6 @@ public class Pago {
 
     private LocalDateTime fechaActualizacion;
 
-    public Pago() {
-        this.fechaCreacion = LocalDateTime.now();
-    }
-
     @ManyToOne
     @JoinColumn(name = "gafas_id")
     private Gafas gafas;
@@ -45,6 +41,24 @@ public class Pago {
     @PreUpdate
     public void actualizarFecha() {
         this.fechaActualizacion = LocalDateTime.now();
+    }
+
+
+    public Pago() {
+        this.fechaCreacion = LocalDateTime.now();
+    }
+
+    public Pago(Long id, BigDecimal monto, String metodoPago, String estadoPago, Integer cantidad, String referencia, String transactionId, LocalDateTime fechaCreacion, LocalDateTime fechaActualizacion, Gafas gafas) {
+        this.id = id;
+        this.monto = monto;
+        this.metodoPago = metodoPago;
+        this.estadoPago = estadoPago;
+        this.cantidad = cantidad;
+        this.referencia = referencia;
+        this.transactionId = transactionId;
+        this.fechaCreacion = fechaCreacion;
+        this.fechaActualizacion = fechaActualizacion;
+        this.gafas = gafas;
     }
 
     public Long getId() {

@@ -1,6 +1,6 @@
 package com.MoralexCorpSolare_Company_SAS.enums;
 
-public enum PaymentMethod {
+public enum MetodoPago {
 
     CARD,
     PSE,
