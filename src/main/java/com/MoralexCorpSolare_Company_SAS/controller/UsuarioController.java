@@ -1,6 +1,6 @@
 package com.MoralexCorpSolare_Company_SAS.controller;
 
-import com.MoralexCorpSolare_Company_SAS.entity.Usuario;
+import com.MoralexCorpSolare_Company_SAS.model.entity.Usuario;
 import com.MoralexCorpSolare_Company_SAS.service.UsuarioService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
 package com.MoralexCorpSolare_Company_SAS.service;
 
-import com.MoralexCorpSolare_Company_SAS.entity.Usuario;
+import com.MoralexCorpSolare_Company_SAS.model.entity.Usuario;
 import java.util.List;
 
 

@@ -1,11 +1,11 @@
 package com.MoralexCorpSolare_Company_SAS.service.impl;
 
-import com.MoralexCorpSolare_Company_SAS.dto.request.AuthRequest;
-import com.MoralexCorpSolare_Company_SAS.dto.response.AuthResponse;
-import com.MoralexCorpSolare_Company_SAS.dto.request.RegisterRequest;
-import com.MoralexCorpSolare_Company_SAS.dto.response.RegisterResponse;
-import com.MoralexCorpSolare_Company_SAS.entity.Usuario;
-import com.MoralexCorpSolare_Company_SAS.enums.RolUsuario;
+import com.MoralexCorpSolare_Company_SAS.model.dto.request.AuthRequest;
+import com.MoralexCorpSolare_Company_SAS.model.dto.response.AuthResponse;
+import com.MoralexCorpSolare_Company_SAS.model.dto.request.RegisterRequest;
+import com.MoralexCorpSolare_Company_SAS.model.dto.response.RegisterResponse;
+import com.MoralexCorpSolare_Company_SAS.model.entity.Usuario;
+import com.MoralexCorpSolare_Company_SAS.model.enums.RolUsuario;
 import com.MoralexCorpSolare_Company_SAS.repository.UsuarioRepository;
 import com.MoralexCorpSolare_Company_SAS.security.JwtService;
 import com.MoralexCorpSolare_Company_SAS.service.AuthService;

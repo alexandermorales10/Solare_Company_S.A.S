@@ -1,7 +1,7 @@
 package com.MoralexCorpSolare_Company_SAS.controller;
 
 
-import com.MoralexCorpSolare_Company_SAS.entity.Gafas;
+import com.MoralexCorpSolare_Company_SAS.model.entity.Gafas;
 import com.MoralexCorpSolare_Company_SAS.service.GafasService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.MoralexCorpSolare_Company_SAS.dto.request;
+package com.MoralexCorpSolare_Company_SAS.model.dto.request;
 
 public class RegisterRequest {
 

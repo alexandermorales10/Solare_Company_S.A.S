@@ -1,7 +1,6 @@
-package com.MoralexCorpSolare_Company_SAS.entity;
+package com.MoralexCorpSolare_Company_SAS.model.entity;
 
-import com.MoralexCorpSolare_Company_SAS.enums.RolUsuario;
-import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.MoralexCorpSolare_Company_SAS.model.enums.RolUsuario;
 import jakarta.persistence.*;
 
 @Entity

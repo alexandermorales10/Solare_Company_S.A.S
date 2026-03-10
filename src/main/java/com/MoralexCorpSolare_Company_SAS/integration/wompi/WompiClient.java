@@ -1,8 +1,8 @@
 package com.MoralexCorpSolare_Company_SAS.integration.wompi;
 
-import com.MoralexCorpSolare_Company_SAS.dto.request.PagoRequestDTO;
-import com.MoralexCorpSolare_Company_SAS.dto.response.PagoResponseDTO;
-import com.MoralexCorpSolare_Company_SAS.entity.Pago;
+import com.MoralexCorpSolare_Company_SAS.model.dto.request.PagoRequestDTO;
+import com.MoralexCorpSolare_Company_SAS.model.dto.response.PagoResponseDTO;
+import com.MoralexCorpSolare_Company_SAS.model.entity.Pago;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
