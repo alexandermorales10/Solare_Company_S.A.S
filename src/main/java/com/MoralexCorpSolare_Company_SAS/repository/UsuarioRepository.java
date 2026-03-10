@@ -1,6 +1,6 @@
 package com.MoralexCorpSolare_Company_SAS.repository;
 
-import com.MoralexCorpSolare_Company_SAS.entity.Usuario;
+import com.MoralexCorpSolare_Company_SAS.model.entity.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

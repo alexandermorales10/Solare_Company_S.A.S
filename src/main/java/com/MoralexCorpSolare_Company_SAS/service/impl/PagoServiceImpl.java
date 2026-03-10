@@ -1,9 +1,9 @@
 package com.MoralexCorpSolare_Company_SAS.service.impl;
 
-import com.MoralexCorpSolare_Company_SAS.dto.request.PagoRequestDTO;
-import com.MoralexCorpSolare_Company_SAS.dto.response.PagoResponseDTO;
-import com.MoralexCorpSolare_Company_SAS.entity.Gafas;
-import com.MoralexCorpSolare_Company_SAS.entity.Pago;
+import com.MoralexCorpSolare_Company_SAS.model.dto.request.PagoRequestDTO;
+import com.MoralexCorpSolare_Company_SAS.model.dto.response.PagoResponseDTO;
+import com.MoralexCorpSolare_Company_SAS.model.entity.Gafas;
+import com.MoralexCorpSolare_Company_SAS.model.entity.Pago;
 import com.MoralexCorpSolare_Company_SAS.exception.BadRequestException;
 import com.MoralexCorpSolare_Company_SAS.exception.ResourceNotFoundException;
 import com.MoralexCorpSolare_Company_SAS.integration.wompi.WompiClient;

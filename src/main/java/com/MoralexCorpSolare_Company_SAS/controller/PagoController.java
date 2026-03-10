@@ -1,7 +1,7 @@
 package com.MoralexCorpSolare_Company_SAS.controller;
 
-import com.MoralexCorpSolare_Company_SAS.dto.request.PagoRequestDTO;
-import com.MoralexCorpSolare_Company_SAS.dto.response.PagoResponseDTO;
+import com.MoralexCorpSolare_Company_SAS.model.dto.request.PagoRequestDTO;
+import com.MoralexCorpSolare_Company_SAS.model.dto.response.PagoResponseDTO;
 import com.MoralexCorpSolare_Company_SAS.service.PagoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

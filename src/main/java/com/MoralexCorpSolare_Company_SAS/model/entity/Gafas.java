@@ -1,4 +1,4 @@
-package com.MoralexCorpSolare_Company_SAS.entity;
+package com.MoralexCorpSolare_Company_SAS.model.entity;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;

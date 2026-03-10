@@ -1,9 +1,9 @@
 package com.MoralexCorpSolare_Company_SAS.mapper;
 
-import com.MoralexCorpSolare_Company_SAS.dto.request.UsuarioRequestDTO;
-import com.MoralexCorpSolare_Company_SAS.dto.response.UsuarioResponseDTO;
-import com.MoralexCorpSolare_Company_SAS.entity.Usuario;
-import com.MoralexCorpSolare_Company_SAS.enums.RolUsuario;
+import com.MoralexCorpSolare_Company_SAS.model.dto.request.UsuarioRequestDTO;
+import com.MoralexCorpSolare_Company_SAS.model.dto.response.UsuarioResponseDTO;
+import com.MoralexCorpSolare_Company_SAS.model.entity.Usuario;
+import com.MoralexCorpSolare_Company_SAS.model.enums.RolUsuario;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;

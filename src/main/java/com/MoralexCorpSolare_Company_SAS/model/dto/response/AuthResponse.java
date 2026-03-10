@@ -1,4 +1,4 @@
-package com.MoralexCorpSolare_Company_SAS.dto.response;
+package com.MoralexCorpSolare_Company_SAS.model.dto.response;
 
 public class AuthResponse {
 

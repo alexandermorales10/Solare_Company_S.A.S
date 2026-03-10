@@ -1,6 +1,6 @@
-package com.MoralexCorpSolare_Company_SAS.dto.response;
+package com.MoralexCorpSolare_Company_SAS.model.dto.response;
 
-import com.MoralexCorpSolare_Company_SAS.enums.MetodoPago;
+import com.MoralexCorpSolare_Company_SAS.model.enums.MetodoPago;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

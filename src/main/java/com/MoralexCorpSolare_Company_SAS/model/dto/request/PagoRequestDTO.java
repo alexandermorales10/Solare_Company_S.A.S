@@ -1,6 +1,6 @@
-package com.MoralexCorpSolare_Company_SAS.dto.request;
+package com.MoralexCorpSolare_Company_SAS.model.dto.request;
 
-import com.MoralexCorpSolare_Company_SAS.enums.MetodoPago;
+import com.MoralexCorpSolare_Company_SAS.model.enums.MetodoPago;
 
 import java.math.BigDecimal;
 

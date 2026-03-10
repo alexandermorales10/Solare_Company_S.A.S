@@ -1,6 +1,6 @@
 package com.MoralexCorpSolare_Company_SAS.service.impl;
 
-import com.MoralexCorpSolare_Company_SAS.entity.Gafas;
+import com.MoralexCorpSolare_Company_SAS.model.entity.Gafas;
 import com.MoralexCorpSolare_Company_SAS.repository.GafasRepository;
 import com.MoralexCorpSolare_Company_SAS.service.GafasService;
 import org.springframework.stereotype.Service;
