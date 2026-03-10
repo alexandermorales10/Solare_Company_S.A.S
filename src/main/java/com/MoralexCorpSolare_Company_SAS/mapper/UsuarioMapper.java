@@ -4,6 +4,13 @@ import com.MoralexCorpSolare_Company_SAS.dto.request.UsuarioRequestDTO;
 import com.MoralexCorpSolare_Company_SAS.dto.response.UsuarioResponseDTO;
 import com.MoralexCorpSolare_Company_SAS.entity.Usuario;
 import com.MoralexCorpSolare_Company_SAS.enums.RolUsuario;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.List;
 
 public class UsuarioMapper {
 
@@ -59,5 +66,23 @@ public class UsuarioMapper {
         }
 
         usuario.setRolUsuario(RolUsuario.valueOf(dto.getRol().toUpperCase()));
+    }
+
+    public static UserDetails userToUserDetails(Usuario usuario){
+        String username = usuario.getCorreo();
+        String password = usuario.getPassword();
+        Collection<? extends GrantedAuthority> authorities = List.of(new SimpleGrantedAuthority("ADMIN"));
+
+        User user = new User(
+                username,
+                password,
+                true,
+                true,
+                true,
+                true,
+                authorities
+        );
+
+        return user;
     }
 }
